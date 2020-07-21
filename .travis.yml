@@ -16,4 +16,4 @@ cache:
 install:
   - npm ci
 script:
-  - npm run cy:run
+  - npm run cy:run -- --record --key $RECORDID
