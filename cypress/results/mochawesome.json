@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-24T07:38:28.074Z",
+    "end": "2020-07-24T07:38:30.929Z",
+    "duration": 2855,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "23a21efd-ce0a-4ed1-b532-fc0610251c07",
+      "title": "",
+      "fullFile": "cypress/integration/examples/apiRequest.spec.js",
+      "file": "cypress/integration/examples/apiRequest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ea5269a5-b999-410b-a67a-ca02b8d04ef0",
+          "title": "tests api TastDive",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get request with JDD",
+              "fullTitle": "tests api TastDive Get request with JDD",
+              "timedOut": null,
+              "duration": 2116,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('ListTestAPI').as('research').then(function (research) {\n  research.forEach(function (research) {\n    cy.tasteDiveReq(research.q, research.limit, research.info).then(function (response) {\n      expect(response.status).to.eql(200);\n      cy.log(JSON.stringify(response.body));\n      expect(response.body).to.have.property('Similar');\n    });\n  });\n});",
+              "err": {},
+              "uuid": "7ac77f8f-ab93-45fb-a91d-24e8499392e3",
+              "parentUUID": "ea5269a5-b999-410b-a67a-ca02b8d04ef0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get request for Lolila movie",
+              "fullTitle": "tests api TastDive Get request for Lolila movie",
+              "timedOut": null,
+              "duration": 716,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.tasteDiveReq('Lolita', 5).then(function (response) {\n  expect(response.status).to.eql(200);\n  expect(response.body).to.have.property('Similar');\n  expect(response.body.Similar).to.have.property('Results');\n  expect(response.body.Similar.Info[0].Name).to.eql('Lolita');\n  expect(response.body.Similar.Results).to.have.lengthOf(5);\n});",
+              "err": {},
+              "uuid": "03deb69e-b40d-490d-b086-02357f09fc4d",
+              "parentUUID": "ea5269a5-b999-410b-a67a-ca02b8d04ef0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7ac77f8f-ab93-45fb-a91d-24e8499392e3",
+            "03deb69e-b40d-490d-b086-02357f09fc4d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2832,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

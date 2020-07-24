@@ -1,3 +1,9 @@
 {
-  "projectId": "ht4erq"
+  "projectId": "ht4erq",
+  "reporter": "mochawesome",
+"reporterOptions": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true}
 }

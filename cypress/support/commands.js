@@ -9,3 +9,5 @@ Cypress.Commands.add('tasteDiveReq', (query, limit, info) => {
         }
     }) 
 })
+import 'cypress-file-upload'
+require('cypress-downloadfile/lib/downloadFileCommand')

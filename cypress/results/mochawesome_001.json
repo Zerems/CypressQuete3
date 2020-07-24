@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-24T07:38:33.842Z",
+    "end": "2020-07-24T07:38:47.374Z",
+    "duration": 13532,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e0e74d11-6f99-48c3-854d-d48095b0d2d4",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test_auth.spec.js",
+      "file": "cypress/integration/examples/test_auth.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "17e83567-aeb4-4473-a039-5bc1c55375d8",
+          "title": "tests d authentification pass",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "authtification réussie",
+              "fullTitle": "tests d authentification pass authtification réussie",
+              "timedOut": null,
+              "duration": 8049,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.backmarket.fr/'), cy.get('a[href*=\"register\"]').click();\ncy.wait(2000);\ncy.get('input[id=\"email-signin\"]').type('albinet.remy@gmail.com');\ncy.get('input[data-test=\"input-field-input\"]').first().type('Backmarlket2020');\ncy.get('[data-test=submit-button-login]').click();\ncy.get('._2nHfIZQXqcC1ULPq_PYyQ').should('contain', 'Adopter un produit');",
+              "err": {},
+              "uuid": "3347454c-3b60-4c45-900b-75d0fcc7a66e",
+              "parentUUID": "17e83567-aeb4-4473-a039-5bc1c55375d8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3347454c-3b60-4c45-900b-75d0fcc7a66e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8049,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "e852dae7-7c0e-4548-8201-4871c574b42d",
+          "title": "test authentification fail",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "authetification fail",
+              "fullTitle": "test authentification fail authetification fail",
+              "timedOut": null,
+              "duration": 4144,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.backmarket.fr\");\ncy.get('a[href*=\"register\"]').click();\ncy.wait(2000);\ncy.get('input[id=\"email-signin\"]').type('albinet;remy@gmail.com');\ncy.get('input[data-test=\"input-field-input\"]').first().type('blblblb');\ncy.get('[data-test=submit-button-login]').click();\ncy.get('[data-test=login-credential-error]').should('contain', 'Mauvaise combinaison email/mot de passe');",
+              "err": {},
+              "uuid": "ffab97ab-3864-4a14-bb57-6f22a5733253",
+              "parentUUID": "e852dae7-7c0e-4548-8201-4871c574b42d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ffab97ab-3864-4a14-bb57-6f22a5733253"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4144,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

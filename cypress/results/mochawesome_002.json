@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-07-24T07:38:50.694Z",
+    "end": "2020-07-24T07:38:53.596Z",
+    "duration": 2902,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ad091a35-2b35-4cf9-910d-da872a910006",
+      "title": "",
+      "fullFile": "cypress/integration/examples/uploadAndDowloadTests.spec.js",
+      "file": "cypress/integration/examples/uploadAndDowloadTests.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ba842a5d-167f-4cc2-a54f-88cc24e74a18",
+          "title": "File upload and download tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Upload file and download it in Zip format",
+              "fullTitle": "File upload and download tests Upload file and download it in Zip format",
+              "timedOut": null,
+              "duration": 970,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#fileField').attachFile('fileToUpload.jpg');\ncy.contains('This bin contains 1 file').should('be.visible');\ncy.get('.fa-cloud-download').click();\ncy.contains('Zip').invoke('attr', 'href').then(function (downloadLink) {\n  cy.log(downloadLink);\n  cy.downloadFile(downloadLink, 'mydownloads/zipFiles', 'downloadedFromCypress.zip');\n  cy.readFile('mydownloads/zipFiles/downloadedFromCypress.zip');\n});",
+              "err": {
+                "message": "Error: A fixture file could not be found at any of the following paths:\n\n> cypress/fixtures/fileToUpload.jpg\n> cypress/fixtures/fileToUpload.jpg{{extension}}\n\nCypress looked for these file extensions at the provided path:\n\n> .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.",
+                "estack": "Error: A fixture file could not be found at any of the following paths:\n\n> cypress/fixtures/fileToUpload.jpg\n> cypress/fixtures/fileToUpload.jpg{{extension}}\n\nCypress looked for these file extensions at the provided path:\n\n> .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.\n    at get (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/lib/errors.js:946:15)\n    at Object.throwErr [as throw] (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/lib/errors.js:964:9)\n    at Object.<anonymous> (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/lib/fixture.js:62:23)\n    at Object.tryCatcher (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:547:31)\n    at Promise._settlePromise (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:604:18)\n    at Promise._settlePromise0 (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:649:10)\n    at Promise._settlePromises (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:729:18)\n    at Promise._fulfill (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:673:18)\n    at /Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/nodeback.js:42:21\n    at f (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/once/once.js:25:25)\n    at Glob.<anonymous> (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:151:7)\n    at Glob.emit (events.js:210:5)\n    at Glob._finish (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:197:8)\n    at done (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:182:14)\n    at Glob._processSimple2 (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:688:12)\n    at /Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:676:10\n    at Glob._stat2 (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:772:12)\n    at lstatcb_ (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:764:12)\n    at RES (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/inflight/inflight.js:31:16)\n    at f (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/once/once.js:25:25)\n    at callback (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/graceful-fs/polyfills.js:289:20)\n    at FSReqCallback.oncomplete (fs.js:158:21)\n",
+                "diff": null
+              },
+              "uuid": "7b5e512f-3c82-47c1-9f47-a4e251f255e4",
+              "parentUUID": "ba842a5d-167f-4cc2-a54f-88cc24e74a18",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Upload file and download it in Tar format",
+              "fullTitle": "File upload and download tests Upload file and download it in Tar format",
+              "timedOut": null,
+              "duration": 483,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#fileField').attachFile('fileToUpload.jpg');\ncy.contains('This bin contains 1 file').should('be.visible');\ncy.get('.fa-cloud-download').click();\ncy.contains('Tar').invoke('attr', 'href').then(function (downloadLink) {\n  cy.log(downloadLink);\n  cy.downloadFile(downloadLink, 'mydownloads/tarFiles', 'downloadedFromCypress.tar');\n  cy.readFile('mydownloads/tarFiles/downloadedFromCypress.tar');\n});",
+              "err": {
+                "message": "Error: A fixture file could not be found at any of the following paths:\n\n> cypress/fixtures/fileToUpload.jpg\n> cypress/fixtures/fileToUpload.jpg{{extension}}\n\nCypress looked for these file extensions at the provided path:\n\n> .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.",
+                "estack": "Error: A fixture file could not be found at any of the following paths:\n\n> cypress/fixtures/fileToUpload.jpg\n> cypress/fixtures/fileToUpload.jpg{{extension}}\n\nCypress looked for these file extensions at the provided path:\n\n> .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.\n    at get (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/lib/errors.js:946:15)\n    at Object.throwErr [as throw] (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/lib/errors.js:964:9)\n    at Object.<anonymous> (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/lib/fixture.js:62:23)\n    at Object.tryCatcher (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:547:31)\n    at Promise._settlePromise (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:604:18)\n    at Promise._settlePromise0 (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:649:10)\n    at Promise._settlePromises (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:729:18)\n    at Promise._fulfill (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/promise.js:673:18)\n    at /Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/bluebird/js/release/nodeback.js:42:21\n    at f (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/once/once.js:25:25)\n    at Glob.<anonymous> (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:151:7)\n    at Glob.emit (events.js:210:5)\n    at Glob._finish (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:197:8)\n    at done (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:182:14)\n    at Glob._processSimple2 (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:688:12)\n    at /Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:676:10\n    at Glob._stat2 (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:772:12)\n    at lstatcb_ (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/glob/glob.js:764:12)\n    at RES (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/inflight/inflight.js:31:16)\n    at f (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/once/once.js:25:25)\n    at callback (/Users/remyalbinet/Library/Caches/Cypress/4.10.0/Cypress.app/Contents/Resources/app/packages/server/node_modules/graceful-fs/polyfills.js:289:20)\n    at FSReqCallback.oncomplete (fs.js:158:21)\n",
+                "diff": null
+              },
+              "uuid": "5b3900df-94ab-4123-8878-75323b0fcbdc",
+              "parentUUID": "ba842a5d-167f-4cc2-a54f-88cc24e74a18",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7b5e512f-3c82-47c1-9f47-a4e251f255e4",
+            "5b3900df-94ab-4123-8878-75323b0fcbdc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1453,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
